@@ -2,6 +2,8 @@
 - name: Installation des serveurs web
   hosts: web
   remote_user: root
+  vars:
+    user: jian
 
   tasks:
   - name: Installation des items
@@ -9,13 +11,12 @@
     with_items: 
       - vim
       - git
+
   - name: Création d'un utilisateur
-    user: 
-      name: jian
-      comment: "Jian MA"
+    when: user is defined
+    user: name={{ user }} comment="Jian MA"
+
   - name: Ajout de la clef ssh
-    authorized_key: 
-      user: jian
-      state: present
-      key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+    when: user is defined
+    authorized_key: user={{ user }} state=present key="{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
 ...
