@@ -9,6 +9,13 @@
     with_items: 
       - vim
       - git
-      - epel-release
-      - htop
+  - name: Création d'un utilisateur
+    user: 
+      name: jian
+      comment: "Jian MA"
+  - name: Ajout de la clef ssh
+    authorized_key: 
+      user: jian
+      state: present
+      key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
 ...
