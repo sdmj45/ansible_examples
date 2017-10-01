@@ -2,3 +2,7 @@
   - name: install
     become: yes
     yum: name=nginx state=latest
+
+  - name: Start
+    become: yes
+    service: name=nginx state=started enabled=true

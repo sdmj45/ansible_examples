@@ -1,13 +1,13 @@
 ---
 - name: Installation des serveurs web
   hosts: web
-  remote_user: jian
+  remote_user: root
   vars:
     user: jian
 
   roles: 
-    #- utils
-    #/roles/ngix- user
+    - utils
+    - user
     - nginx
 
 
