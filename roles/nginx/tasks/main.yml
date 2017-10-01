@@ -11,3 +11,11 @@
     become: yes
     file: path=/etc/nginx/sites-enabled/default state=absent
     notify: nginx reload
+
+  - name: Création un dossier
+    become: yes
+    file: path=/home/{{user}}/{{domain}} state=directory owner={{user}}
+
+  - name: Lien vers www
+    become: yes
+    file: src=/home/{{user}}/{{domain}} dest=/var/www/{{domain}} state=link

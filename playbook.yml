@@ -4,6 +4,7 @@
   remote_user: root
   vars:
     user: jian
+    domain: local.dev
 
   roles: 
     - utils
