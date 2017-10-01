@@ -1,0 +1,4 @@
+---
+  - name: install
+    become: yes
+    yum: name=nginx state=latest
