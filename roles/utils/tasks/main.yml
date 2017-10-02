@@ -5,3 +5,7 @@
       - vim
       - git
       - net-tools
+
+  - name: Installation java
+    package: name={{ item }} state=installed
+    with_items: "{{ java_packages }}" 

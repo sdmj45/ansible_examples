@@ -9,7 +9,7 @@
       - demo.fr
 
   roles: 
-    #- utils
+    - utils
     - user
     - nginx
 
