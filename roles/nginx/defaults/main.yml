@@ -1,0 +1,16 @@
+yum_php_version: "70u"
+yum_php_packages:
+  - php{{ yum_php_version }}-cli
+  - php{{ yum_php_version }}-common
+  - php{{ yum_php_version }}-fpm
+  - php{{ yum_php_version }}-fpm-nginx
+  - php{{ yum_php_version }}-json
+  - php{{ yum_php_version }}-mysqlnd
+  - php{{ yum_php_version }}-opcache
+  - php{{ yum_php_version }}-pdo
+php_timezone: Europe/Paris
+php_upload_max_filesize: "20M"
+php_post_max_size: "20M"
+php_memory_limit: "1024M"
+
+

@@ -4,10 +4,12 @@
   remote_user: root
   vars:
     user: jian
-    domain: local.dev
+    domains: 
+      - local.dev
+      - demo.fr
 
   roles: 
-    - utils
+    #- utils
     - user
     - nginx
 
