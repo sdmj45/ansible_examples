@@ -1,2 +1,8 @@
 java_packages:
   - java-1.8.0-openjdk
+
+spark_mirror: https://d3kbcqa49mib13.cloudfront.net
+spark_version: 2.1.0-bin-hadoop2.7
+spark_src_dir: /usr/local/dev/spark
+
+spark_master: spark://192.168.1.79:7077

@@ -6,6 +6,9 @@
       - git
       - net-tools
 
-  - name: Installation java
+  - name: Installation de java
     package: name={{ item }} state=installed
-    with_items: "{{ java_packages }}" 
+    with_items: "{{ java_packages }}"
+
+  - name: Installation de spark
+    include: spark.yml
